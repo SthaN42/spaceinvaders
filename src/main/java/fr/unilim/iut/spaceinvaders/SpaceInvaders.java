@@ -14,10 +14,14 @@ public class SpaceInvaders {
 	}
 	
 	public void positionnerunNouveauVaisseau(int x, int y) {
-		if (x >= longueur)
+		if (!estDansEspaceJeu(x, y))
 			throw new HorsEspaceJeuException("Vous etes en dehors de l'espace de jeu");
-		
+
 		this.vaisseau = new Vaisseau(x,y);
+	}
+
+	private boolean estDansEspaceJeu(int x, int y) {
+		return ((x >= 0) && (x < longueur)) && ((y >= 0) && (y < hauteur));
 	}
 	
 	@Override
