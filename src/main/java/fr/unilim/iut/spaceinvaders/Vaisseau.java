@@ -19,9 +19,14 @@ public class Vaisseau {
 	public void seDeplacerVersLaDroite() {
 		this.x += 1;
 	}
+
+	public void seDeplacerVersLaGauche() {
+		this.x -= 1;		
+	}
 	
 	// getters
 	public int abcisse() {
 		return x;
 	}
+
 }
