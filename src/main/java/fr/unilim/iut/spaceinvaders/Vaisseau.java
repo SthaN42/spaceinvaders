@@ -8,27 +8,42 @@ public class Vaisseau {
 	int hauteur;
 	
 	// constructeur
-	public Vaisseau(int x, int y) {
-		this.longueur = 1;
-		this.hauteur = 1;
-		this.x = x;
-		this.y = y;
-	}
-
 	public Vaisseau(int longueur, int hauteur, int x, int y) {
 		this.longueur = longueur;
 		this.hauteur = hauteur;
 		this.x = x;
 		this.y = y;
 	}
+	
+	public Vaisseau(int longueur, int hauteur) {
+		this(longueur, hauteur, 0, 0);
+	}
 
 	// méthodes
 	public boolean occupeLaPosition(int x, int y) {
-		if ((this.x <= x) && (x <= this.x + this.longueur - 1)) 
-		      if ((this.y - this.hauteur + 1 <= y) && (y <= this.y))
-			  return true;
+	     return estAbcisseCouverte(x) && estOrdonneeCouverte(y);
+	}
+
+	public boolean estOrdonneeCouverte(int y) {
+		return ordonneeLaPlusBasse(y) <= y && (y <= ordonneeLaPlusHaute());
+	}
+
+	public int ordonneeLaPlusBasse(int y) {
+		return ordonneeLaPlusHaute() - this.hauteur + 1;
+	}
+
+	private boolean estAbcisseCouverte(int x) {
+		return (abcisseLaPlusAGauche() <= x) && (x <= abcisseLaPlusADroite());
+	}
+
+	public int abcisseLaPlusADroite() {
+		return this.x + this.longueur - 1;
+	}
+
+	public void positionner(int x, int y) {
+		this.x = x;
+		this.y = y;
 		
-	     return false;
 	}
 
 	public void seDeplacerVersLaDroite() {
@@ -40,8 +55,12 @@ public class Vaisseau {
 	}
 	
 	// getters
-	public int abcisse() {
-		return x;
+	public int abcisseLaPlusAGauche() {
+		return this.x;
+	}
+	
+	public int ordonneeLaPlusHaute() {
+		return this.y;
 	}
 
 }
