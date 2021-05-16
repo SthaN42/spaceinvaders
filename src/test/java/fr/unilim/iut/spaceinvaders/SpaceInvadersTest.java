@@ -182,4 +182,6 @@ public class SpaceInvadersTest {
 		 } catch (final DebordementEspaceJeuException e) {
 		 }
 	 }
+	 
+	 // TODO continuer à l'étape 3 (Dimensionner Vaisseau) : Déplacer un vaisseau vers la droite en tenant compte de sa dimension
 }
