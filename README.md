@@ -1,11 +1,43 @@
 # SpaceInvaders
 
+- [Semaine n°4 : du 17 au 21 mai](#semaine4)
 - [Semaine n°3 : du 10 au 15 mai](#semaine3)
 - [Semaine n°2 : du 26 avril au 2 mai](#semaine2)
 - [Semaine n°1 : du 19 au 25 avril](#semaine1)
 - [Glossaire](#glossaire)
 
 ----
+
+## Semaine n°4 : du 17 au 21 mai <a name="semaine4"></a>
+
+### Sprints et fonctionnalités réalisés
+
+#### Fonctionnalité n°2 : Dimensensionner le vaisseau
+
+- Etape 3 : 
+
+- Etape 4 : 
+
+#### Fonctionnalité n°3 : Dimensensionner le vaisseau
+
+### Diagramme de classe
+
+![Diagramme de classe Semaine 4]()
+
+### Nuage de mots
+
+![Nuage de mots Semaine 4]()
+
+### Difficultés rencontrés
+
+Aucune
+
+### Remarques diverses
+
+Aucune
+
+----
+
 ## Semaine n°3 : du 10 au 15 mai <a name="semaine3"></a>
 
 ### Sprints et fonctionnalités réalisés

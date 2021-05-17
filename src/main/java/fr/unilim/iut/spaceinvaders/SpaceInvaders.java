@@ -90,4 +90,9 @@ public class SpaceInvaders {
 		}
 	}
 
+	public void tirerUnMissile(Dimension dimension, int i) {
+		// TODO Auto-generated method stub
+		// TODO fonctionnalité 4 : tirer un missile en TDD
+	}
+
 }
