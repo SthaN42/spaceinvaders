@@ -35,7 +35,7 @@ On vérifie également que le vaisseau reste au bord de l'espace de jeu et ne d�
 
 ### Nuage de mots
 
-![Nuage de mots Semaine 4](./images/nuageMots24.png)
+![Nuage de mots Semaine 4](./images/nuageMotsS4.png)
 
 ### Difficultés rencontrés
 
