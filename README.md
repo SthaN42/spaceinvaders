@@ -14,19 +14,28 @@
 
 #### Fonctionnalité n°2 : Dimensensionner le vaisseau
 
-- Etape 3 : 
+- Etape 3 : Déplacer un vaisseau vers la droite en tenant compte de sa dimension
+Avant de déplacer le vaisseau, on vérifie qu'il ne dépassera pas de l'espace de jeu
 
-- Etape 4 : 
+- Etape 4 : Déplacer un vaisseau vers la gauche en tenant compte de sa dimension
+Même fonctionnement que l'étape 3, on vérifie que le vaisseau ne dépassera pas
 
-#### Fonctionnalité n°3 : Dimensensionner le vaisseau
+#### Fonctionnalité n°3 : Choisir la vitesse du vaisseau
+
+- Etape 1 : Régler la vitesse du vaisseau
+On donne une vitesse qu vaisseau, qui représente le nombre de "cases" que le vaisseau va parcourir en un déplacement
+
+- Etape 2 : Faire en sorte que le déplacement se fasse *correctement* pour une vitesse quelconque
+On vérifie que le vaisseau se déplace du même nombre de cases que la vitesse donné
+On vérifie également que le vaisseau reste au bord de l'espace de jeu et ne dépasse pas
 
 ### Diagramme de classe
 
-![Diagramme de classe Semaine 4]()
+![Diagramme de classe Semaine 4](./images/diagClasseS4.png)
 
 ### Nuage de mots
 
-![Nuage de mots Semaine 4]()
+![Nuage de mots Semaine 4](./images/nuageMots24.png)
 
 ### Difficultés rencontrés
 
