@@ -15,18 +15,34 @@ public class DessinSpaceInvaders implements DessinJeu {
 	}
 
 	private void dessinerUnVaisseau(Vaisseau vaisseau, BufferedImage im) {
-		   Graphics2D crayon = (Graphics2D) im.getGraphics();
+		Graphics2D crayon = (Graphics2D) im.getGraphics();
 
-		   crayon.setColor(Color.gray);
-		   	crayon.fillRect(vaisseau.abscisseLaPlusAGauche(), vaisseau.ordonneeLaPlusBasse(), vaisseau.dimension.longueur, vaisseau.dimension.hauteur);
+		crayon.setColor(Color.gray);
+		crayon.fillRect(vaisseau.abscisseLaPlusAGauche(), vaisseau.ordonneeLaPlusBasse(), vaisseau.dimension.longueur,
+				vaisseau.dimension.hauteur);
 
-	   }
+	}
+	
+	private void dessinerUnMissile(Missile missile, BufferedImage im) {
+		Graphics2D crayon = (Graphics2D) im.getGraphics();
+
+		crayon.setColor(Color.blue);
+		crayon.fillRect(missile.abscisseLaPlusAGauche(), missile.ordonneeLaPlusBasse(), missile.dimension.longueur,
+				missile.dimension.hauteur);
+	}
 
 	@Override
 	public void dessiner(BufferedImage image) {
 		if (this.jeu.aUnVaisseau()) {
 			Vaisseau vaisseau = this.jeu.recupererVaisseau();
+			
 			this.dessinerUnVaisseau(vaisseau, image);
+		}
+		
+		if (this.jeu.aUnMissile()) {
+			Missile missile = this.jeu.recupererMissile();
+			
+			this.dessinerUnMissile(missile, image);
 		}
 	}
 
