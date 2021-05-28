@@ -162,6 +162,7 @@ public class SpaceInvadersTest {
 			"VVV............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 		}
 	 
+	 @Test
 	 public void test_VaisseauAvance_DeplacerVaisseauVersLaDroite() {
 
 	       spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(3,2),new Position(7,9),3);
@@ -216,7 +217,7 @@ public class SpaceInvadersTest {
 	       "VVV............\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
 	     }
 	 
-	 /*@Test
+	 @Test
      public void test_MissileBienTireDepuisVaisseau_VaisseauLongueurImpaireMissileLongueurImpaire() {
 
 	   spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(7,2),new Position(5,9), 2);
@@ -233,5 +234,11 @@ public class SpaceInvadersTest {
        ".......MMM.....\n" + 
        ".....VVVVVVV...\n" + 
        ".....VVVVVVV...\n" , spaceinvaders.recupererEspaceJeuDansChaineASCII());
-    }*/
+    }
+	 
+	 @Test(expected = MissileException.class)
+		public void test_PasAssezDePlacePourTirerUnMissile_UneExceptionEstLevee() throws Exception { 
+		   spaceinvaders.positionnerUnNouveauVaisseau(new Dimension(7,2),new Position(5,9), 1);
+		   spaceinvaders.tirerUnMissile(new Dimension(7,9),1);
+		}
 }
