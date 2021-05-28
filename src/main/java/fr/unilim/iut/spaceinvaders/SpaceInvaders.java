@@ -1,8 +1,10 @@
 package fr.unilim.iut.spaceinvaders;
 
+import fr.unilim.iut.spaceinvaders.moteurJeu.Commande;
+import fr.unilim.iut.spaceinvaders.moteurJeu.Jeu;
 import fr.unilim.iut.spaceinvaders.utils.*;
 
-public class SpaceInvaders {
+public class SpaceInvaders implements Jeu {
 
 	int longueur;
 	int hauteur;
@@ -82,7 +84,7 @@ public class SpaceInvaders {
 		return missile != null;
 	}
 
-	private boolean aUnVaisseau() {
+	public boolean aUnVaisseau() {
 		return vaisseau != null;
 	}
 
@@ -108,6 +110,26 @@ public class SpaceInvaders {
 			throw new MissileException("il n'y a pas assez de hauteur libre entre le vaisseau et le haut de l'espace jeu pour tirer le missile.");
 
 		this.missile = this.vaisseau.tirerUnMissile(dimensionMissile, vitesse);
+	}
+
+	@Override
+	public void evoluer(Commande commandeUser) {
+		if (commandeUser.gauche) {
+            deplacerVaisseauVersLaGauche();
+        }
+		
+       if (commandeUser.droite) {
+	        deplacerVaisseauVersLaDroite();
+       }
+	}
+
+	@Override
+	public boolean etreFini() {
+		return false;
+	}
+	
+	public Vaisseau recupererVaisseau() {
+		return this.vaisseau;
 	}
 
 }
